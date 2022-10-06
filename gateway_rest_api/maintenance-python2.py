@@ -2,7 +2,7 @@
 # coding=utf-8
 """
 version 1.0
-Script to activate maintenance page on a WAF mapping
+Script to activate maintenance page on an Airlock Gateway mapping
 """
 
 import urllib2
@@ -17,10 +17,10 @@ from signal import *
 API_KEY_FILE = "./api_key"
 
 parser = ArgumentParser(add_help=False)
-parser.add_argument("-h", dest="host", metavar="<WAF hostname>",
-                    required=True, help="Alrock WAF hostname")
+parser.add_argument("-h", dest="host", metavar="<Airlock Gateway hostname>",
+                    required=True, help="Airlock Gateway hostname")
 parser.add_argument("-m", dest="mapping", metavar="<mapping name>",
-                    required=True, help="Logical name of the WAF mapping")
+                    required=True, help="mapping name")
 parser.add_argument("-a", choices=['enable', 'disable'], dest="action",
                     required=True, help="Enable or disable maintenance page")
 
