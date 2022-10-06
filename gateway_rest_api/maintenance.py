@@ -18,10 +18,10 @@ from http.cookiejar import CookieJar
 from signal import *
 
 parser = ArgumentParser(add_help=False)
-parser.add_argument("-h", dest="host", metavar="<WAF hostname>",
-                    required=True, help="Airlock WAF hostname")
+parser.add_argument("-h", dest="host", metavar="<hostname>[:port]",
+                    required=True, help="Airlock Gateway hostname and optional port")
 parser.add_argument("-m", dest="mapping", metavar="<mapping name>",
-                    required=True, help="Logical name of the WAF mapping")
+                    required=True, help="mapping name")
 parser.add_argument("-a", choices=['enable', 'disable'], dest="action",
                     required=True, help="Enable or disable maintenance page")
 
